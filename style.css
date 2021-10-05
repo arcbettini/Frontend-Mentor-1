@@ -1,0 +1,168 @@
+/*=====ATRIBUTION=====*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*=====RESET INFO/PREDEF=====*/
+
+:root {
+  /**==Primary==**/
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /**==Neutral==**/
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg_image {
+  background: url(./assets/pattern-background-mobile.svg) no-repeat center/cover;
+  height: 25rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+h4{
+  width: 100px;
+  padding: 0 0 0.31rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--pale-blue);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container{
+  background-color: #fff;
+  margin:1.25rem;
+  /*exclui PADDING para aproximar a imagem da borda da DIV
+  padding: 1.5rem;*/
+  padding-bottom:1.25rem;
+  border-radius: 0.32rem;
+  box-shadow: 0.19rem 0.19rem 0.19rem 0.19rem hsl(228, 45%, 44%, 0.20);
+}
+
+.container img.hero{
+  width: 100%;
+  border-radius: 0.31rem 0.31rem 0 0;
+}
+
+.container .plan-div{
+  margin: 1.87rem auto;
+  padding: 0.62rem;
+  background-color: var(--very-pale-blue);
+  width:90%;
+  border-radius:0.62rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .plan-div article{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .plan-div article img{
+  margin-right: 0.62rem;
+}
+
+.container #payment-button #cancel-button{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+
+}
+
+button {
+  font-family: inherit; /*verificar a função INHERIT*/
+}
+
+.button{
+  border: none;
+  padding: 0.31rem 0.62rem;
+  border-radius:0.62rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#change-button{
+  background-color: transparent;
+  color: var(--bright-blue);
+  text-decoration: underline;
+}
+
+#payment-button{
+  background-color: var(--bright-blue);
+  color: #fff;
+  padding: 0.62rem;
+}
+
+#payment-button:hover, #cancel-button:hover{
+  opacity: 0.5;
+}
+
+#cancel-button{
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  padding: 0.62rem;
+}
+
+
+.container h2{
+  color: var(--dark-blue);
+  margin: 0.62rem 0;
+}
+
+.container p.paragr-broke {
+  padding: 0 1.88rem ;
+}
+
+p {
+  font-size: 1rem;
+  line: height 1.6em;
+  color: var(--desaturated-blue);
+}
+
+/*USADA FUNÇÃO "IMPORT" GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*FUNÇÃO PARA RESPONSIVO EM TABLET*/
+@media (min-width:768px) {
+  .bg_image{
+    background: url(./assets/pattern-background-desktop.svg) no-repeat center/cover;
+    height: 50vh;
+}
+
+.container{
+  width: 500px;
+}
